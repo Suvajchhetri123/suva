@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Moksha.fits</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="">Moksha.fits</a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="./image/shopping-bag_8601815.png" width="30px" height="30px">
+                <img src="./image/menu_2976215.png" class="menu-icon"  onclick="menutoggle()">
+            </div>
+        </div>
+
+
+
+    <!-------Account PAge-------->
+
+
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="image/IMG_20240116_065806_1.jpg" width="100%">
+                    </div>
+                    <div class="col-2">
+                       <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forget Password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <!----footer----->
+
+
+   <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and IOS Mobile Phone.</p>
+                    <div class="app-logo">
+                        <img src="./image/playstore.webp">
+                        <img src="./image/Download_on_the_App_Store_Badge.svg.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="./image/logo.jpg">
+                    <p>Our purpose is to provide best quality clothes in cheapest price.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Usefull Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policies</li>
+                        <li>Join Affiliates</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow US </h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instragram</li>
+                        <li>Tiktok</li>
+                        <li>Twiter</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2024 Moksha.fits. All Rights Reserved.</p>
+
+        </div>
+    </div>
+<!---------js for toogle menu---------->
+    <script>
+        var MenuItems=document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight="0px";
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px")
+            {
+                MenuItems.style.maxHeight="200px"
+            }
+            else
+            {
+                MenuItems.style.maxHeight="0px"
+            }
+        }
+    </script>
+
+    <!--------js for toggle form------>
+
+    <script>
+
+        var LoginForm=document.getElementById("LoginForm");
+        var RegForm=document.getElementById("RegForm");
+        var Indicator=document.getElementById("Indicator");
+
+            function register()
+            {
+                RegForm.style.transform="translateX(0px)"
+                LoginForm.style.transform="translateX(0px)"
+                Indicator.style.transform="translateX(100px)"
+            }
+            function login()
+            {
+                RegForm.style.transform="translateX(300px)"
+                LoginForm.style.transform="translateX(300px)"
+                Indicator.style.transform="translateX(0px)"
+            }
+
+
+    </script>
+
+</body>    
+</html>
